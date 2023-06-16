@@ -10,8 +10,15 @@ public class Main {
         ChromeDriver driver = new ChromeDriver();
         driver.get("https://react-shopping-cart-67954.firebaseapp.com/");
         Thread.sleep(10000);
-        WebElement button = driver.findElement(By.xpath("//a[@class='sc-151bmbx-1 cwLwBP']"));
-        System.out.println(button.getText());
-        button.click();
+        WebElement Add = driver.findElement(By.xpath("//*[@id=\"root\"]/div/main/main/div/div[5]/button"));
+        System.out.println(Add.getText());
+        Add.click();
+
+        WebElement Cart = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div[1]/div"));
+        System.out.println(Cart.getText());
+
+        WebElement Checkout = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div[3]/button"));
+        System.out.println(Checkout.getText());
+        Checkout.click();
     }
 }
